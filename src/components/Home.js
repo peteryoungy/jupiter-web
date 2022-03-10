@@ -55,20 +55,20 @@ const renderCardTitle = (item, loggedIn, favs, favOnChange) => {
     </>
   )
 }
- 
+// 1, 2, 4, 4, 6
 const renderCardGrid = (data, loggedIn, favs, favOnChange) => {
   return (
     <List
       grid={{
         xs: 1,
-        sm: 2,
-        md: 4,
-        lg: 4,
-        xl: 6,
+        sm: 1,
+        md: 2,
+        lg: 2,
+        xl: 2,
       }}
       dataSource={data}
       renderItem={item => (
-        <List.Item style={{ marginRight: '20px' }}>
+        <List.Item style={{ marginRight: '20px'}}>
           <Card
             title={renderCardTitle(item, loggedIn, favs, favOnChange)}
           >
@@ -76,6 +76,7 @@ const renderCardGrid = (data, loggedIn, favs, favOnChange) => {
               <img 
                 alt="Placeholder"
                 src={processUrl(item.thumbnail_url)}
+                
               />
             </a>
           </Card>

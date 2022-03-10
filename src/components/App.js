@@ -1,13 +1,13 @@
 import React from 'react';
 import { Button, Col, Layout, Menu, message, Row } from 'antd';
-import Login from './components/Login';
-import Register from './components/Register';
-import { getFavoriteItem, getRecommendations, getTopGames, logout, searchGameById } from './utils';
-import Favorites from './components/Favorites';
+import Login from './Login';
+import Register from './Register';
+import { getFavoriteItem, getRecommendations, getTopGames, logout, searchGameById } from '../utils';
+import Favorites from './Favorites';
 import { LikeOutlined, FireOutlined } from '@ant-design/icons';
-import CustomSearch from './components/CustomSearch';
+import CustomSearch from './CustomSearch';
 import SubMenu from 'antd/lib/menu/SubMenu';
-import Home from './components/Home';
+import Home from './Home';
  
 const { Header, Content, Sider } = Layout;
  
@@ -99,7 +99,7 @@ class App extends React.Component {
  
   render = () => (
     <Layout>
-      <Header>
+      <Header className = "header">
         <Row justify="space-between">
             <Col>
               {
